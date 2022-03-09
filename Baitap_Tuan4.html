@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai tap</title>
+    <style>
+        * {
+            margin: 0px auto;
+            padding: 0px;
+        }
+        
+        body {
+            background-image: url(../hinhanh/background.png);
+        }
+        
+        .wrapper {
+            height: 700px;
+            width: 1089px;
+            background-color: antiquewhite;
+        }
+        
+        nav {
+            height: 50px;
+            width: 100%;
+            background-color: aquamarine;
+            line-height: 50px;
+        }
+        
+        header {
+            height: 150px;
+            width: 100%;
+            background-image: url(../hinhanh/Header.jfif);
+        }
+        
+        .wrapper header .head {
+            color: #4576FF;
+            font-size: 100px;
+            font-weight: bold;
+            text-shadow: 5px 5px 5px #999999;
+            text-align: center;
+            line-height: 150px;
+        }
+        
+        .wrapper header:hover .head {
+            transform: rotate(20deg);
+        }
+        
+        .content {
+            width: 100%;
+            height: 360px;
+            background-color: azure;
+        }
+        
+        aside {
+            height: 360px;
+            width: 30%;
+            float: left;
+        }
+        
+        section {
+            height: 360px;
+            width: 70%;
+            float: left;
+            background-color: yellow;
+        }
+        
+        .clear {
+            clear: both;
+        }
+        
+        .menu li {
+            float: left;
+            width: 150px;
+            height: 50px;
+            list-style: none;
+            text-indent: 20px;
+            background-color: beige;
+            position: relative;
+        }
+        
+        .menu li .submenu {
+            position: absolute;
+            display: none;
+        }
+        
+        a {
+            font-weight: bold;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-decoration: none;
+        }
+        
+        .menu li:hover {
+            background-color: black;
+        }
+        
+        li:hover>a {
+            font-style: italic;
+            color: white;
+        }
+        
+        .menu li:hover .submenu {
+            display: block;
+        }
+        
+        nav span form #txtSubmit {
+            padding: 3px;
+            border-radius: 50%;
+        }
+        
+        nav span form #txtEmail {
+            padding: 3px;
+            font-weight: bold;
+        }
+        
+        .content aside article img:hover {
+            transform: rotate(20deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul class="menu">
+                <li><a href="">HOME</a></li>
+                <li><a href="">SERVICES</a></li>
+                <li><a href="">CONTACT</a>
+                    <ul class="submenu">
+                        <li><a href="">PHONE</a></li>
+                        <li><a href="">INTERNET</a></li>
+                        <li><a href="">TIVI</a></li>
+                    </ul>
+                </li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">HELP</a></li>
+            </ul>
+            <span>
+                <form action="dangky.php" method="post">
+                    <label for="email">Email: </label>
+                    <input type="email" name="txtEmail" id="txtEmail" required placeholder="Nhap Email">
+                    <input style="submit" value="GO" id="txtSubmit">
+                </form>
+            </span>
+        </nav>
+        <header>
+            <p class="head">GAME SHOW</p>
+        </header>
+        <div class="content">
+            <aside>
+                <article>
+                    <h2>HOAT DONG DOAN</h2>
+                    <img src="../hinhanh/mozilla.png" alt="">
+                </article>
+                <article>
+                    <h2>HOAT DONG HOC TAP</h2>
+                    <img src="../hinhanh/mozilla.png" alt="">
+                </article>
+                <article>
+                    <h2>HOAT DONG MUA HE XANH</h2>
+                    <img src="../hinhanh/mozilla.png" alt="">
+                </article>
+            </aside>
+            <section>
+                <p>DANG KY THONG TIN</p>
+                <form action="" method="post">
+                    <fieldset>
+                        <legend>Thong tin cua ban</legend>
+                        <label for="lblHoTen">Ho ten: </label>
+                        <input type="text" name="txtTH" id="txtHoTen" placeholder="Nhap ten vao" required placeholder="30"> <br> <br>
+                        <label for="lblCMND">So CMND: </label>
+                        <input type="number" name="numCMND" id="numCMND" placeholder="Nhap so CMND" required placeholder="30" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"> <br> <br>
+                        <label for="lblNgaySinh">Nhap NgaySinh: </label>
+                        <input type="date" name="txtTH" id="txtNgay" placeholder="Nhap ngay sinh" required placeholder="dd/mm/yy"> <br> <br>
+                        <label for="lblGT">Gioi tinh: </label>
+                        <input type="radio" name="radNam" id="radNam" value="Nam"> <label for="lblNam">Nam</label>
+                        <input type="radio" name="radNu" id="radNu" value="Nu"> <label for="lblNu">Nu</label> <br> <br>
+                        <input type="submit" value="GO" style="text-align: center;">
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+        <div class="clear"></div>
+        <footer>Cuoi trang</footer>
+    </div>
+</body>
+
+</html>
